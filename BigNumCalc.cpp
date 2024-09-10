@@ -5,7 +5,7 @@ bigNumCalc::~bigNumCalc() {};
 
 list<int> bigNumCalc::buildBigNum(string numString) {
   list<int> listOfNumbers;
-  for (int i = 0; i < numString.length(); i++) {
+  for (auto i = 0; i < numString.length(); i++) {
     listOfNumbers.push_back(numString[i] - '0');
   }
 
