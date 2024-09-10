@@ -13,10 +13,8 @@ LinkedList::LinkedList(int* array, int len) {
 }
 
 void LinkedList::insertPosition(int pos, int newNum) {
-  std::cout << "Inserting " << newNum << " at position " << pos << std::endl;
   if (pos <= 1) {
     head = new Node(newNum, head);
-    std::cout << "Inserted at head" << std::endl;
     return;
   }
 
@@ -29,14 +27,11 @@ void LinkedList::insertPosition(int pos, int newNum) {
   }
 
   if (current == nullptr) {
-    std::cout << "Position beyond list end, no insertion made" << std::endl;
     return;
   }
 
   Node* newNode = new Node(newNum, current->getLink());
   current->setLink(newNode);
-  std::cout << "Inserted " << newNum << " after position " << currentPos
-            << std::endl;
 }
 
 bool LinkedList::deletePosition(int pos) {
@@ -56,9 +51,9 @@ bool LinkedList::deletePosition(int pos) {
   }
 
   if (prev) {
-    prev->setLink(current->getLink());  // this executes if prev is not null
+    prev->setLink(current->getLink());
   } else {
-    head = current->getLink();  // this executes is prev is null
+    head = current->getLink();
   }
 
   delete current;
