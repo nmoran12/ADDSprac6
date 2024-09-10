@@ -3,10 +3,10 @@
 using namespace std;
 #include <list>
 
-class bigNumCalc {
+class BigNumCalc {
  public:
-  bigNumCalc();
-  ~bigNumCalc();
+  BigNumCalc();
+  ~BigNumCalc();
 
   list<int> buildBigNum(string numString);
   list<int> add(list<int> num1, list<int> num2);

@@ -1,9 +1,9 @@
 #include "BigNumCalc.h"
 
-bigNumCalc::bigNumCalc() {};
-bigNumCalc::~bigNumCalc() {};
+BigNumCalc::BigNumCalc() {};
+BigNumCalc::~BigNumCalc() {};
 
-list<int> bigNumCalc::buildBigNum(string numString) {
+list<int> BigNumCalc::buildBigNum(string numString) {
   list<int> listOfNumbers;
   for (auto i = 0u; i < numString.length(); i++) {
     listOfNumbers.push_back(numString[i] - '0');
@@ -12,7 +12,7 @@ list<int> bigNumCalc::buildBigNum(string numString) {
   return listOfNumbers;
 }
 
-list<int> bigNumCalc::add(list<int> num1, list<int> num2) {
+list<int> BigNumCalc::add(list<int> num1, list<int> num2) {
   list<int> result;
 
   num1.reverse();
@@ -44,7 +44,7 @@ list<int> bigNumCalc::add(list<int> num1, list<int> num2) {
   return result;
 };
 
-list<int> bigNumCalc::sub(list<int> num1, list<int> num2) {
+list<int> BigNumCalc::sub(list<int> num1, list<int> num2) {
   list<int> result;
   num1.reverse();
   num2.reverse();
@@ -86,7 +86,7 @@ list<int> bigNumCalc::sub(list<int> num1, list<int> num2) {
   return result;
 }
 
-list<int> bigNumCalc::mul(list<int> num1, list<int> num2) {
+list<int> BigNumCalc::mul(list<int> num1, list<int> num2) {
   list<int> result;
 
   if (num2.size() != 1) {
